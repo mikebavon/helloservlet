@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import systech.internship.student.Student;
 
-@WebServlet("/school.sy/*")
+@WebServlet("/school")
 public class School extends HttpServlet{
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) 

@@ -1,5 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head><title>Welcome Home</title>
+<style type="text/css">
+
+</style>
 <script type="text/javascript">
 
 var showTable = function(){
@@ -38,5 +44,9 @@ Address: <input type="text" name="address"><br/>
 Gender: <select><option value="MALE">Male</option><option value="FEMALE">Female</option></select><br/>
 </form>
 <button onclick="showTable()">Show table</button>
+
+<hr/>
+<jsp:include page="test.jsp"></jsp:include>
+<a href=""></a>
 </body>
 </html>
