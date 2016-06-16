@@ -7,6 +7,8 @@ public class Student {
 	private String regNo;
 
 	public String getName() {
+		if(name == null)
+			return "Not available";
 		return name;
 	}
 
@@ -20,6 +22,10 @@ public class Student {
 
 	public void setRegNo(String regNo) {
 		this.regNo = regNo;
+	}
+	
+	public double calculate(int number1, int number2){
+		return Math.sqrt(number1 + number2);
 	}
 	
 }

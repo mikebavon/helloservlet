@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<jsp:useBean id="student"  class="systech.internship.student.Student"/>
+<%@ include file="default.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head><title>Welcome Home</title>
@@ -22,6 +24,15 @@ var showTable = function(){
 
 </script>
 </head>
+<%
+
+if(request.getParameter("number1") != null)
+	number1 = Integer.parseInt(request.getParameter("number1"));
+
+if(request.getParameter("number2") != null)
+	number2 = Integer.parseInt(request.getParameter("number2"));
+
+%>
 <body>
 <h1>Systech Services</h1>
 <ol>
@@ -36,17 +47,16 @@ var showTable = function(){
 </div>
 <hr/>
 <br/>
-<span style="color:red;">Register</span>
+<span style="color:red;">Calculator</span>
 <form action="#">
-First Name: <input type="text" name="firstname"><br/>
-Last Name: <input type="text" name="lastname"><br/>
-Address: <input type="text" name="address"><br/>
-Gender: <select><option value="MALE">Male</option><option value="FEMALE">Female</option></select><br/>
+Number One: <input type="text" name="number1"><br/>
+Number Two: <input type="text" name="number2"><br/>
+<input type="submit" value="Submit">
 </form>
 <button onclick="showTable()">Show table</button>
 
 <hr/>
-<jsp:include page="test.jsp"></jsp:include>
-<a href=""></a>
+The sum is <%=  student.calculate(number1, number2) %>
+
 </body>
 </html>
